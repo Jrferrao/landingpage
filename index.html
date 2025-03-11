@@ -96,12 +96,13 @@
     <a href="#" class="top-btn">↑ Voltar ao Topo</a>
 
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
+    document.querySelector('.top-btn').addEventListener('click', function(e) {
+        e.preventDefault(); 
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
         });
-    </script>
+    });
+</script>
 </body>
 </html>
